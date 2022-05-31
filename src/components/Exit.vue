@@ -25,8 +25,8 @@
             <div>Premium</div>
             <div
               v-if="
-                state.context.age *
-                state.context.exchangeRate *
+                state.context.age &&
+                state.context.exchangeRate &&
                 state.context.planeRate[state.context.plan]
               "
             >
