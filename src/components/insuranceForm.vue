@@ -31,7 +31,7 @@
             <div class="flex flex-col space-y-1">
               <label for="age" class="font-bold text-gray-600">Age</label>
               <input
-                type="text"
+                type="number"
                 v-model="state.context.age"
                 placeholder="Enter Age"
                 class="border-2 py-1.5 px-3 rounded-md"
