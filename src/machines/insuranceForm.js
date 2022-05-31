@@ -63,8 +63,8 @@ export const insuranceStates = createMachine(
             },
           },
           BACK: {
-            // actions: [() => router.push({ name: 'welcome' })],
-            // target: 'welcome',
+            actions: [() => router.push('/')],
+            target: 'welcome',
           },
         },
       },
@@ -79,6 +79,7 @@ export const insuranceStates = createMachine(
         // },
         invoke: {
           id: 'getExchangeRate',
+          // to get conversions rate fro currency
           src: (context, event) => getExchangeRate(context, event),
           onDone: { target: 'openedForm', actions: 'setExchangeRate' },
           onError: { target: 'openedForm' },

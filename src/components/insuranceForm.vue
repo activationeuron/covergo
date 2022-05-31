@@ -6,10 +6,30 @@
       <div
         class="flex flex-col bg-white px-10 rounded-sm shadow-md py-10 mx-auto"
       >
-        <div class="font-semibold text-xl text-gray-800">
-          <div>Cover Go Insurance Form</div>
-          <div class="text-sm font-normal">
-            Please fill form for insurance details.
+        <div
+          class="font-semibold text-xl text-gray-800 flex items-center space-x-3"
+        >
+          <div class="cursor-pointer" @click="send({ type: 'BACK' })">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M10 19l-7-7m0 0l7-7m-7 7h18"
+              />
+            </svg>
+          </div>
+          <div>
+            <div>Cover Go Insurance Form</div>
+            <div class="text-sm font-normal">
+              Please fill form for insurance details.
+            </div>
           </div>
         </div>
 
