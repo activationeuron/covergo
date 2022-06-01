@@ -21,9 +21,9 @@ export const insuranceStates = createMachine(
       exchangeRate: null,
       premium: 10,
       planeRate: {
-        STD: { plan: 100, factor: 1 },
-        SAFE: { plan: 100, factor: 1.5 },
-        SSAFE: { plan: 100, factor: 1.75 },
+        STD: { factor: 1 },
+        SAFE: { factor: 1.5 },
+        SSAFE: { factor: 1.75 },
       },
     },
     states: {

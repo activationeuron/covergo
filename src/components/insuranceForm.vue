@@ -195,7 +195,7 @@
                   {{
                     state.context.age *
                     state.context.exchangeRate *
-                    state.context.planeRate[state.context.plan].plan *
+                    state.context.premium *
                     state.context.planeRate[state.context.plan].factor
                   }}{{ state.context.place }}
                 </span>
@@ -203,15 +203,23 @@
               <div class="text-sm font-light">
                 based on current exchange rate {{ state.context.exchangeRate }}
               </div>
+              <div>
+                Have To pay
+                {{
+                  state.context.age *
+                    state.context.exchangeRate *
+                    state.context.premium *
+                    state.context.planeRate[state.context.plan].factor -
+                  state.context.age *
+                    state.context.exchangeRate *
+                    state.context.premium
+                }}
+                more
+              </div>
             </div>
             <button
               @click="send({ type: 'NEXT' })"
               class="bg-blue-700 w-full py-2 text-white uppercase rounded-sm shadow-sm my-2 cursor-pointer"
-              :disabled="
-                state.context.age *
-                state.context.exchangeRate *
-                state.context.planeRate[state.context.plan]
-              "
             >
               Next
             </button>
