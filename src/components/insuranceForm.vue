@@ -203,13 +203,19 @@
               <div class="text-sm font-light">
                 based on current exchange rate {{ state.context.exchangeRate }}
               </div>
-              <div>
+              <div
+                v-if="
+                  state.context.plan &&
+                  state.context.exchangeRate &&
+                  state.context.planeRate[state.context.plan]
+                "
+              >
                 Have To pay
                 {{
                   state.context.age *
                     state.context.exchangeRate *
                     state.context.premium *
-                    state.context.planeRate[state.context.plan].factor -
+                    state.context.planeRate[state.context.plan]?.factor -
                   state.context.age *
                     state.context.exchangeRate *
                     state.context.premium
