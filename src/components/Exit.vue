@@ -33,7 +33,7 @@
               {{
                 state.context.age *
                 state.context.exchangeRate *
-                state.context.planeRate[state.context.plan].plan *
+                state.context.premium *
                 state.context.planeRate[state.context.plan].factor
               }}{{ state.context.place }}
             </div>
